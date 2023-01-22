@@ -5,6 +5,10 @@
 .abu-abu {
     background-color: #eaeaea;
 }
+.silver {
+    background-color: #7e7e7e;
+}
+
 
 /*  ========  LOGIN & DAFTAR ==================== */
 .daftarlogin {
@@ -43,10 +47,18 @@
     color: #ffffff;
 }
 
+.hal-trx .konten {
+    width: 90%;
+    margin: 0 5%;
+}
 .hal-trx .input-transaksi p {
     padding: 0;
     margin-top: 20px;
     margin-bottom: 2px;
+}
+
+.hal-trx .btn-tengah {
+    margin: 0 3px;
 }
 
 .hal-trx .tabs {
@@ -89,24 +101,34 @@ select {
 }
 
 .hal-trx .produk:hover {
-    background-color: #eaeaea;
+    background-color: #ffc107;
 }
 
-.hal-trx .card {
-    margin: 5px 0;
-    font-size: 14px;
+.hal-trx .produk .gambar {
+    display: block;
+    width: 20%;
+    float: left;
+    padding-right: 5px;
+}
+.hal-trx .produk .gambar img {
+    width: 100%;
+}
+
+.hal-trx .produk .detail {
+    display: block;
+    width: 80%;
+    padding-left: 5px;
+}
+.hal-trx .produk .detail p {
+    margin: 0;
 }
 
 .hal-trx .nama-produk {
     font-weight: 700;
-}
-
-.hal-trx .harga {
-    color: #1e73be;
-    font-weight: 700;
+    font-size: medium;
 }
 
 .hal-trx .deskripsi-produk {
     font-style: italic;
-    font-size: 11px;
+    font-size: xx-small;
 }

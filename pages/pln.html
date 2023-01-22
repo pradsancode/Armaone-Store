@@ -19,14 +19,17 @@
 <body onload="tampilPLNAwal()" class="abu-abu">
 <div class="hal-trx">    
     <div class="input-transaksi shadow">
-        <div class="container">
+        <div class="konten">
             <p>Masukan nomor Meter / ID Pelanggan</p>
             <div class="input-group mb-3">
-                <input type="phone" id="nomor-tujuan" class="form-control form-control-lg {{hasil_kontak}}"
+                <input type="phone" id="nomor-tujuan" class="form-control form-control-lg {{hasil_kontak}} {{hasil_scan}}"
                     placeholder="contoh: 86xxxx">
                 <a href="https://armaonestore.com/ambil_kontak">
-                    <button class="btn btn-lg btn-warning" type="button" id="button-addon2"><i
+                    <button class="btn btn-lg btn-warning btn-tengah" type="button"><i
                             class="bi bi-person-lines-fill"></i></button>
+                        </a>
+                            <a href="https://armaonestore.com/scan_all">
+                    <button class="btn btn-lg btn-warning" type="button"><i class="bi bi-upc-scan"></i></button>
                 </a>
             </div>
 

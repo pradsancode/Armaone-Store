@@ -62,9 +62,9 @@ var db_PLN_Prabayar = [
     ]
 ];
 
-let PLN_prabayar = '<div class="container">';
+let PLN_prabayar = '<div class="konten">';
 for (let i = 0; i < db_PLN_Prabayar.length; i++) {
-    PLN_prabayar += '<div class="produk rounded shadow-sm" onclick="klik(' + db_PLN_Prabayar[i][7] + ')"><div class="row"><div class="col-6 nama-produk">' + db_PLN_Prabayar[i][1] + '</div><div class="col-6 kanan harga">Rp. ' + db_PLN_Prabayar[i][3] + '</div></div><div class="row"><div class="col-12 deskripsi-produk">' + db_PLN_Prabayar[i][5] + '</div></div></div>';
+    PLN_prabayar += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_PLN_Prabayar[i][7] + ')"><div class="gambar"><img src="../assets/img/armaone-store.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_PLN_Prabayar[i][1] + '</p><p class="deskripsi-produk">' + db_PLN_Prabayar[i][5] + '</p></div></div>';
 }
 PLN_prabayar += '</div>';
 
