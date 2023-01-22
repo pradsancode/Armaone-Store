@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <title>Beli dan Bayar Listrik</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eaeaea;
+        }
+
+
+        hr {
+            height: 8px;
+            border: 12px solid #F4F4F4;
+        }
+
+
+        .kiri {
+            text-align: left;
+        }
+
+        .kanan {
+            text-align: right;
+        }
+
+        /* ==== FORMULIR INPUT TRANSAKSI =====*/
+        .input-transaksi {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1e73be;
+            color: #ffffff;
+        }
+
+        .input-transaksi p {
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 2px;
+        }
+
+        .tabs {
+            padding: 5px 10px;
+            margin: 7px 0 14px 0;
+            background-color: #fff;
+        }
+
+        .tabs button {
+            width: 100%;
+            padding: 3px;
+            font-size: small;
+            font-weight: 700;
+        }
+
+        select {
+            margin-bottom: 14px;
+        }
+
+        #operator-seluler {
+            display: block;
+            background-color: #eaeaea;
+            color: #000;
+            margin: 0 0 15px 0;
+            padding: 0 3px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* ======= PRODUK ==============*/
+        .daftar-produk {
+            margin-top: 180px;
+        }
+
+        .produk {
+            padding: 15px 10px;
+            margin: 7px 0;
+            border-top: 3px solid #1e73be;
+            background-color: #fff;
+        }
+
+        .produk:hover {
+            background-color: #eaeaea;
+        }
+
+        .card {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .nama-produk {
+            font-weight: 700;
+        }
+
+
+        .harga {
+            color: #1e73be;
+            font-weight: 700;
+        }
+
+        .deskripsi-produk {
+            font-style: italic;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body onload="tampilPLNAwal()" class="bg_produk">
+    <div class="input-transaksi shadow">
+        <div class="container">
+            <p>Masukan nomor Meter / ID Pelanggan</p>
+            <div class="input-group mb-3">
+                <input type="phone" id="nomor-tujuan" class="form-control form-control-lg {{hasil_kontak}}"
+                    placeholder="contoh: 86xxxx">
+                <a href="https://armaonestore.com/ambil_kontak">
+                    <button class="btn btn-lg btn-warning" type="button" id="button-addon2"><i
+                            class="bi bi-person-lines-fill"></i></button>
+                </a>
+            </div>
+
+            <div class="tabs rounded">
+                <div class="row">
+                    <div class="col-6">
+                        <button id="btn-prabayar" class="rounded btn btn-light"
+                            onclick="tampilPLNPra()">PRABAYAR</button>
+                    </div>
+                    <div class="col-6">
+                        <button id="btn-pascabayar" class="rounded btn btn-light"
+                            onclick="tampilPLNPasca()">PASCABAYAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="daftar-produk">
+
+        <div id="produk-pln-pascabayar"></div>
+
+        <div id="produk-pln-prabayar"></div>
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/pln.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+        function tampilPLNAwal() {
+            document.getElementById('btn-prabayar').classList.add('btn-success');
+            document.getElementById('btn-prabayar').classList.remove('btn-light');
+            document.getElementById('produk-pln-prabayar').innerHTML = PLN_prabayar;
+        }
+
+        function tampilPLNPra() {
+            document.getElementById('btn-prabayar').classList.add('btn-success');
+            document.getElementById('btn-prabayar').classList.remove('btn-light');
+            document.getElementById('btn-pascabayar').classList.add('btn-light');
+            document.getElementById('btn-pascabayar').classList.remove('btn-success');
+            document.getElementById('produk-pln-prabayar').innerHTML = PLN_prabayar;
+            document.getElementById('produk-pln-pascabayar').innerHTML = "";
+        }
+
+        function tampilPLNPasca() {
+            document.getElementById('btn-prabayar').classList.add('btn-light');
+            document.getElementById('btn-prabayar').classList.remove('btn-success');
+            document.getElementById('btn-pascabayar').classList.add('btn-success');
+            document.getElementById('btn-pascabayar').classList.remove('btn-light');
+            document.getElementById('produk-pln-prabayar').innerHTML = "";
+            document.getElementById('produk-pln-pascabayar').innerHTML = PLN_pascabayar;
+        }
+
+        // DATABASE PRODUK PLN
+        var db_PLN_Prabayar = [
+            [
+                1,
+                "Token 20.000",
+                "Token PLN",
+                "21.000",
+                2147483647,
+                "PLN Prabayar",
+                "Voucher isi ulang listrik (Token PLN).<br>Nomor TOKEN ada pada SN.",
+                "'https://armaonestore.com/produk/token-20-000-1632025'"
+            ],
+            [
+                2,
+                "Token 50.000",
+                "Token PLN",
+                "51.000",
+                2147483647,
+                "PLN Prabayar",
+                "Voucher isi ulang listrik (Token PLN).<br>Nomor TOKEN ada pada SN.",
+                "'https://armaonestore.com/produk/token-50-000-1632044'"
+            ],
+            [
+                3,
+                "Token 100.000",
+                "Token PLN",
+                "101.000",
+                2147483647,
+                "PLN Prabayar",
+                "Voucher isi ulang listrik (Token PLN).<br>Nomor TOKEN ada pada SN.",
+                "'https://armaonestore.com/produk/token-100-000-1632048'"
+            ],
+            [
+                4,
+                "Token 200.000",
+                "Token PLN",
+                "201.000",
+                2147483647,
+                "PLN Prabayar",
+                "Voucher isi ulang listrik (Token PLN).<br>Nomor TOKEN ada pada SN.",
+                "'https://armaonestore.com/produk/token-200-000-1632050'"
+            ],
+            [
+                5,
+                "Token 500.000",
+                "Token PLN",
+                "501.000",
+                2147483647,
+                "PLN Prabayar",
+                "Voucher isi ulang listrik (Token PLN).<br>Nomor TOKEN ada pada SN.",
+                "'https://armaonestore.com/produk/token-500-000-1632054'"
+            ],
+            [
+                6,
+                "Token 1.000.000",
+                "Token PLN",
+                "1.001.000",
+                2147483647,
+                "PLN Prabayar",
+                "Voucher isi ulang listrik (Token PLN).<br>Nomor TOKEN ada pada SN.",
+                "'https://armaonestore.com/produk/token-1-000-000-1632059'"
+            ]
+        ];
+
+        let PLN_prabayar = '<div class="container">';
+        for (let i = 0; i < db_PLN_Prabayar.length; i++) {
+            PLN_prabayar += '<div class="produk rounded shadow-sm" onclick="klik(' + db_PLN_Prabayar[i][7] + ')"><div class="row"><div class="col-6 nama-produk">' + db_PLN_Prabayar[i][1] + '</div><div class="col-6 kanan harga">Rp. ' + db_PLN_Prabayar[i][3] + '</div></div><div class="row"><div class="col-12 deskripsi-produk">' + db_PLN_Prabayar[i][5] + '</div></div></div>';
+        }
+        PLN_prabayar += '</div>';
+
+        var db_PLN_Pascabayar = [
+            [
+                1,
+                "Bayar Tagihan listrik",
+                "Listrik",
+                0,
+                2147483647,
+                "PLN Pascabayar",
+                "Bayar tagihan rekening listrik PLN<br>",
+                "'https://armaonestore.com/produk/bayar-tagihan-listrik-1660440'"
+            ]
+        ];
+
+        let PLN_pascabayar = '<div class="container">';
+        for (let i = 0; i < db_PLN_Pascabayar.length; i++) {
+            PLN_pascabayar += '<div class="produk rounded shadow-sm" onclick="klik(' + db_PLN_Pascabayar[i][7] + ')"><div class="row"><div class="col-8 nama-produk">' + db_PLN_Pascabayar[i][1] + '</div><div class="col-4 kanan harga" id="harga">Rp. ' + db_PLN_Pascabayar[i][3] + '</div></div><div class="row"><div class="col-12 deskripsi-produk">' + db_PLN_Pascabayar[i][5] + '</div></div></div>';
+        }
+        PLN_pascabayar += '</div>';
+
+
+        function klik(link) {
+            var NomorTujuan = document.getElementById('nomor-tujuan').value;
+
+            if (NomorTujuan == "") {
+                alert("Masukan Nomor Tujuan terlebih dahulu")
+            }
+            else {
+                window.location = link + '?catatan=' + NomorTujuan;
+            }
+        }
+    </script>
+</body>
+
+</html>
