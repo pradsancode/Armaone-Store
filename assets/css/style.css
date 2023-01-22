@@ -32,3 +32,81 @@
 .daftarlogin .kaki {
     margin-top: 15px;
 }
+
+/* HALAMAN TRANSAKSI */
+/* ==== FORMULIR INPUT TRANSAKSI =====*/
+.hal-trx .input-transaksi {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e73be;
+    color: #ffffff;
+}
+
+.hal-trx .input-transaksi p {
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+
+.hal-trx .tabs {
+    padding: 5px 10px;
+    margin: 7px 0 14px 0;
+    background-color: #fff;
+}
+
+.hal-trx .tabs button {
+    width: 100%;
+    padding: 3px;
+    font-size: small;
+    font-weight: 700;
+}
+
+select {
+    margin-bottom: 14px;
+}
+
+#operator-seluler {
+    display: block;
+    background-color: #eaeaea;
+    color: #000;
+    margin: 0 0 15px 0;
+    padding: 0 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ======= PRODUK ==============*/
+.hal-trx .daftar-produk {
+    margin-top: 180px;
+}
+
+.hal-trx .produk {
+    padding: 15px 10px;
+    margin: 7px 0;
+    border-top: 3px solid #1e73be;
+    background-color: #fff;
+}
+
+.hal-trx .produk:hover {
+    background-color: #eaeaea;
+}
+
+.hal-trx .card {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.hal-trx .nama-produk {
+    font-weight: 700;
+}
+
+.hal-trx .harga {
+    color: #1e73be;
+    font-weight: 700;
+}
+
+.hal-trx .deskripsi-produk {
+    font-style: italic;
+    font-size: 11px;
+}
