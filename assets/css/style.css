@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.abu-abu {
+    background-color: #eaeaea;
+}
+
+/*  ========  LOGIN & DAFTAR ==================== */
+.daftarlogin {
+    margin-top: 50px;
+}
+
+.daftarlogin img {
+    max-width: 100px;
+}
+
+.daftarlogin .judul {
+    font-size: xx-large;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.daftarlogin form {
+    margin: 10px 50px 0 50px;
+}
+
+.daftarlogin button {
+    margin-top: 10px;
+}
