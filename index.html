@@ -33,72 +33,13 @@
             text-align: right;
         }
 
-        .kepala {
-            position: absolute;
-            top: 0;
-            background-color: #1e73be;
-            height: 150px;
-            border-radius: 0 0 50px 50px;
-            width: 100%;
-            color: #fff;
-        }
-
-        .kepala .judul {
-            margin-top: 20px;
-        }
-
-        .kepala .judul img {
-            margin-top: 7px;
-            max-height: 30px;
-        }
-
-        .kepala .judul i {
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .kepala .judul figcaption {
-            color: #fff;
-            font-size: 8px;
-        }
-
-        .kepala .informasi {
-            margin-top: 20px;
-        }
-
-        .kepala .informasi i {
-            color: #000;
-            font-size: 24px;
-        }
-
-        .kepala .informasi figcaption {
-            color: #000;
-            font-size: 8px;
-        }
-
         .home-konten {
-            margin-top: 180px;
-        }
-
-        .kepala .informasi .card-body {
-            padding: 7px;
-            color: #000;
-            font-weight: 700;
-            width: 100%;
-            font-size: 11px;
-        }
-
-        .kepala .card-body figure {
-            margin: 5px 5px 0 0;
-        }
-
-        .kepala .card-body figure i {
-            font-size: 18px;
+            margin-top: 10px;
         }
 
         /* ======= KOTAK BERJALAN ======= */
         .kotak-berjalan {
-            background-color: #1e73be;
+            background-color: #00695c;
             color: #fff;
             font-family: "Poppins";
             border-radius: 10px;
@@ -165,67 +106,6 @@
 </head>
 
 <body>
-    <div class="kepala">
-        <div class="container judul">
-            <div class="row">
-                <div class="col-6">
-                    <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/logo-full-putih-small.png" alt="">
-                </div>
-                <div class="col-6 kanan">
-                    <figure class="figure text-center">
-                        <a href="https://armaonestore.com/cart">
-                            <i class="bi bi-cart-fill"></i>
-                            <figcaption class="figure-caption text-center">Keranjang</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="figure text-center">
-                        <a href="https://armaonestore.com/akun/?page=notifikasi">
-                            <i class="bi bi-bell-fill"></i>
-                            <figcaption class="figure-caption text-center">Notifikasi</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="figure text-center">
-                        <a href="https://armaonestore.com/pages?kontak">
-                            <i class="bi bi-headset"></i>
-                            <figcaption class="figure-caption text-center">Bantuan</figcaption>
-                        </a>
-                    </figure>
-                </div>
-            </div>
-            <div class="informasi">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="{{foto_profil}}">
-                            </div>
-                            <div class="col-6">
-                                Nama: {{nama_user}}<br />
-                                Saldo: Rp. <span id="saldo_user">{{saldo_user}}</span><br />
-                                Poin: {{poin_member}}
-                            </div>
-                            <div class="col-4 kanan">
-                                <figure class="figure text-center">
-                                    <a href="https://armaonestore.com/akun/?page=topup">
-                                        <i class="bi bi-window-plus"></i>
-                                        <figcaption class="figure-caption text-center">Deposit</figcaption>
-                                    </a>
-                                </figure>
-                                <figure class="figure text-center">
-                                    <a href="https://armaonestore.com/akun/?page=riwayat_topup">
-                                        <i class="bi bi-clock-history"></i>
-                                        <figcaption class="figure-caption text-center">Riwayat</figcaption>
-                                    </a>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <div class="home-konten">
         <div class="kotak-berjalan">
             <img src="https://i.ibb.co/rH9LpML/20220618-033534.png">
@@ -234,31 +114,32 @@
             </marquee>
         </div>
 
-<div class="container daftar-menu">
+        <div class="container daftar-menu">
             <div class="row">
                 <div class="menu">
                     <a href="https://armaonestore.com/digital/178206">
                         <button>
-                            <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/pulsa.png" alt="Pulsa">
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/pulsa.png" alt="Pulsa">
                             <h3>Pulsa</h3>
                         </button>
                     </a>
+
                     <a href="https://armaonestore.com/digital/178207">
                         <button>
-                            <img src="https://imageqyu.files.wordpress.com/2022/10/internet.png" alt="Internet">
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/data.png" alt="Internet">
                             <h3>Paket Data</h3>
                         </button>
                     </a>
                     <a href="https://armaonestore.com/digital/178208">
                         <button>
-                            <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/telepon.png"
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/game.png"
                                 alt="telpon & sms">
-                            <h3>Telpon SMS</h3>
+                            <h3>Game</h3>
                         </button>
                     </a>
                     <a href="https://armaonestore.com/digital/178209">
                         <button>
-                            <img src="https://imageqyu.files.wordpress.com/2022/10/listrik.png" alt="Token PLN">
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/pln.png" alt="Token PLN">
                             <h3>PLN</h3>
                         </button>
                     </a>
@@ -269,26 +150,26 @@
                 <div class="menu">
                     <a href="https://armaonestore.com/digital/178210">
                         <button>
-                            <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/e-money.png" alt="Pulsa">
-                            <h3>E-Money</h3>
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/wallet.png" alt="Pulsa">
+                            <h3>E-Wallet</h3>
                         </button>
                     </a>
                     <a href="https://armaonestore.com/digital/178211">
                         <button>
-                            <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/bpjs.png" alt="Internet">
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/bpjs.png" alt="Internet">
                             <h3>BPJS</h3>
                         </button>
                     </a>
                     <a href="https://armaonestore.com/digital/178212">
                         <button>
-                            <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/telkom.png"
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/telkom.png"
                                 alt="Game Online">
                             <h3>Telkom</h3>
                         </button>
                     </a>
                     <a href="https://armaonestore.com/digital/178213">
                         <button>
-                            <img src="https://www.armaone.co.id/wp-content/uploads/2023/01/lainnya.png" alt="Token PLN">
+                            <img src="https://galeriimgqyu.files.wordpress.com/2023/01/semua-produk.png" alt="Token PLN">
                             <h3>Semua</h3>
                         </button>
                     </a>
@@ -319,7 +200,7 @@
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
