@@ -61,6 +61,7 @@
 
         .kotak-bantuan button {
             width: 100%;
+            font-weight: 700;
         }
 
         /*  == PRODUK == */
@@ -164,7 +165,7 @@
                         <li>Silahkan pilih <b>Prabayar</b> (beli token) atau <b>Pascabayar</b> (bayar tagihan).</li>
                         <li>Kemudian pilih / tekan produk yang muncul di bawah.</li>
                         <li>Akan muncul informasi harga. Silahkan tekan <b>Bayar</b> jika transaksi prabayar. Dan tekan
-                            <b>Cek <b>Tagihan</b> dan <b>bayar</b> apabila produk <b>Pascabayar.</b></li>
+                            <b>Cek Tagihan</b> dan <b>bayar</b> apabila produk <b>Pascabayar.</b></li>
                         <li>Masukan <b>PIN</b> untuk mengkonfirmasi transaksi.</li>
                         <li>Transaksi Selesai. Nomor Token akan muncul pada laporan transaksi bagian <b>Serial Number
                                 (SN)</b>.</li>
@@ -274,7 +275,7 @@
 
         let PLN_prabayar = '<div class="konten-produk">';
         for (let i = 0; i < db_PLN_Prabayar.length; i++) {
-            PLN_prabayar += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_PLN_Prabayar[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/token-pln.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_PLN_Prabayar[i][1] + '</p><p class="deskripsi-produk">' + db_PLN_Prabayar[i][4] + '</p></div></div>';
+            PLN_prabayar += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_PLN_Prabayar[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/token.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_PLN_Prabayar[i][1] + '</p><p class="deskripsi-produk">' + db_PLN_Prabayar[i][4] + '</p></div></div>';
         }
         PLN_prabayar += '</div>';
 
@@ -292,7 +293,7 @@
 
         let PLN_pascabayar = '<div class="konten-produk">';
         for (let i = 0; i < db_PLN_Pascabayar.length; i++) {
-            PLN_pascabayar += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_PLN_Pascabayar[i][6] + ')"><div class="gambar"><img src="../assets/img/armaone-store.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_PLN_Pascabayar[i][1] + '</p><p class="deskripsi-produk">' + db_PLN_Pascabayar[i][4] + '</p></div></div>';
+            PLN_pascabayar += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_PLN_Pascabayar[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-pascabayar.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_PLN_Pascabayar[i][1] + '</p><p class="deskripsi-produk">' + db_PLN_Pascabayar[i][4] + '</p></div></div>';
         }
         PLN_pascabayar += '</div>';
     </script>
