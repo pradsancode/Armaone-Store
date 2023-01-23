@@ -39,7 +39,7 @@
 
 /* HALAMAN TRANSAKSI */
 /* ==== FORMULIR INPUT TRANSAKSI =====*/
-.hal-trx .input-transaksi {
+.input-transaksi {
     position: fixed;
     top: 0;
     width: 100%;
@@ -47,27 +47,27 @@
     color: #ffffff;
 }
 
-.hal-trx .konten {
+.konten {
     width: 90%;
     margin: 0 5%;
 }
-.hal-trx .input-transaksi p {
+.input-transaksi p {
     padding: 0;
     margin-top: 20px;
     margin-bottom: 2px;
 }
 
-.hal-trx .btn-tengah {
+.btn-tengah {
     margin: 0 3px;
 }
 
-.hal-trx .tabs {
+.tabs {
     padding: 5px 10px;
     margin: 7px 0 14px 0;
     background-color: #fff;
 }
 
-.hal-trx .tabs button {
+.tabs button {
     width: 100%;
     padding: 3px;
     font-size: small;
@@ -89,46 +89,46 @@ select {
 }
 
 /* ======= PRODUK ==============*/
-.hal-trx .daftar-produk {
+.daftar-produk {
     margin-top: 180px;
 }
 
-.hal-trx .produk {
+.produk {
     padding: 15px 10px;
     margin: 7px 0;
     border-top: 3px solid #1e73be;
     background-color: #fff;
 }
 
-.hal-trx .produk:hover {
+.produk:hover {
     background-color: #ffc107;
 }
 
-.hal-trx .produk .gambar {
+.produk .gambar {
     display: block;
     width: 20%;
     float: left;
     padding-right: 5px;
 }
-.hal-trx .produk .gambar img {
+.produk .gambar img {
     width: 100%;
 }
 
-.hal-trx .produk .detail {
+.produk .detail {
     display: block;
     width: 80%;
     padding-left: 5px;
 }
-.hal-trx .produk .detail p {
+.produk .detail p {
     margin: 0;
 }
 
-.hal-trx .nama-produk {
+.nama-produk {
     font-weight: 700;
     font-size: medium;
 }
 
-.hal-trx .deskripsi-produk {
+.deskripsi-produk {
     font-style: italic;
     font-size: xx-small;
 }
