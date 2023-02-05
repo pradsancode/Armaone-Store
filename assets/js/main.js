@@ -5,3 +5,14 @@ function rubah(angka) {
   return ribuan;
 }
 document.getElementById("saldo_user").innerText = rubah(document.getElementById("saldo_user").textContent);
+
+function beli(link) {
+  var NomorTujuan = document.getElementById('nomor-tujuan').value;
+
+  if (NomorTujuan == "") {
+      alert("Masukan Nomor Tujuan terlebih dahulu")
+  }
+  else {
+      window.location = link + '?catatan=' + NomorTujuan;
+  }
+}

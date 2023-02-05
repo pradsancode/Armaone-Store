@@ -96,7 +96,7 @@ hr {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #00695c;
+    background-color: #1e73be;
     color: #ffffff;
 }
 
@@ -135,7 +135,7 @@ hr {
 
 .produk {
     padding: 15px 10px;
-    margin: 7px 0;
+    margin: 10px 0;
     border-top: 3px solid #00695c;
     background-color: #fff;
 }
