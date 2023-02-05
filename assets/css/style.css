@@ -86,92 +86,93 @@ hr {
 /*========= HOME END =========*/
 
 
-        /* ========= HALAMAN ======== */
-        .konten-produk {
-            width: 90%;
-            margin: 0 5%;
-        }
+/* ========= HALAMAN ======== */
+.konten-produk {
+    width: 90%;
+    margin: 0 5%;
+}
 
-        .kotak-input {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #00695c;
-            color: #ffffff;
-        }
+.kotak-input {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #00695c;
+    color: #ffffff;
+}
 
-        .form-input {
-            width: 90%;
-            margin: 20px 5%;
-        }
+.form-input {
+    width: 90%;
+    margin: 20px 5%;
+}
 
-        .btn-tengah {
-            margin: 0 3px;
-        }
+.btn-tengah {
+    margin: 0 3px;
+}
 
-        .kotak-menu {
-            width: 88%;
-            float: left;
-            margin-right: 2%;
-        }
+.kotak-menu {
+    width: 88%;
+    float: left;
+    margin-right: 2%;
+}
 
-        .kotak-menu button {
-            width: 50%;
-        }
+.kotak-menu button {
+    width: 50%;
+}
 
-        .kotak-bantuan {
-            width: 10%;
-        }
+.kotak-bantuan {
+    width: 10%;
+}
 
-        .kotak-bantuan button {
-            width: 100%;
-            font-weight: 700;
-        }
+.kotak-bantuan button {
+    width: 100%;
+    font-weight: 700;
+}
 
-        /*  == PRODUK == */
-        .daftar-produk {
-            margin-top: 165px;
-        }
+/*  == PRODUK == */
+.daftar-produk {
+    margin-top: 165px;
+}
 
-        .produk {
-            padding: 15px 10px;
-            margin: 7px 0;
-            border-top: 3px solid #00695c;
-            background-color: #fff;
-        }
+.produk {
+    padding: 15px 10px;
+    margin: 7px 0;
+    border-top: 3px solid #00695c;
+    background-color: #fff;
+}
 
-        .produk:hover {
-            background-color: #eaeaea;
-        }
+.produk:hover {
+    background-color: #eaeaea;
+}
 
-        .produk .gambar {
-            display: block;
-            width: 20%;
-            float: left;
-            padding-right: 5px;
-        }
+.produk .gambar {
+    display: block;
+    width: 20%;
+    float: left;
+    padding-right: 5px;
+}
 
-        .produk .gambar img {
-            width: 100%;
-        }
+.produk .gambar img {
+    width: 100%;
+}
 
-        .produk .detail {
-            display: block;
-            width: 80%;
-            padding-left: 5px;
-        }
+.produk .detail {
+    display: block;
+    width: 80%;
+    padding-left: 5px;
+}
 
-        .produk .detail p {
-            margin: 0;
-        }
+.produk .detail p {
+    margin: 0;
+}
 
-        .nama-produk {
-            font-weight: 700;
-            font-size: medium;
-        }
+.nama-produk {
+    font-weight: 700;
+    font-size: medium;
+}
 
-        .deskripsi-produk {
-            font-style: italic;
-            font-size: xx-small;
-        }
-    /* ===== HALAMAN END ====== */
+.deskripsi-produk {
+    font-style: italic;
+    font-size: xx-small;
+}
+
+/* ===== HALAMAN END ====== */
