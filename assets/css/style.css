@@ -1,134 +1,87 @@
 * {
-    box-sizing: border-box;
-}
+            box-sizing: border-box;
+        }
 
-.abu-abu {
-    background-color: #eaeaea;
-}
-.silver {
-    background-color: #7e7e7e;
-}
+        hr {
+            height: 8px;
+            border: 12px solid #F4F4F4;
+        }
 
 
-/*  ========  LOGIN & DAFTAR ==================== */
-.daftarlogin {
-    margin-top: 50px;
-}
+        .kiri {
+            text-align: left;
+        }
 
-.daftarlogin img {
-    max-width: 100px;
-}
+        .kanan {
+            text-align: right;
+        }
 
-.daftarlogin .judul {
-    font-size: xx-large;
-    margin-top: 15px;
-    font-weight: 700;
-}
+        .home-konten {
+            margin-top: 10px;
+        }
 
-.daftarlogin form {
-    margin: 10px 50px 0 50px;
-}
+        /* ======= KOTAK BERJALAN ======= */
+        .kotak-berjalan {
+            background-color: #00695c;
+            color: #fff;
+            font-family: "Poppins";
+            border-radius: 10px;
+            padding: 5px;
+            margin: 2%;
+            margin-bottom: 10px;
+            width: 96%;
+            height: 28px;
+            float: left;
+            font-size: 10px;
+            position: relative;
+            z-index: 2;
+            overflow: ellipsis;
+        }
 
-.daftarlogin button {
-    margin-top: 10px;
-}
+        .kotak-berjalan img {
+            border-radius: 100px;
+            width: 8%;
+            height: auto;
+            padding: 0px;
+            background-color: transparent;
+            float: left;
+            margin-top: -5px;
+        }
 
-.daftarlogin .kaki {
-    margin-top: 15px;
-}
+        .kotak-berjalan marquee {
+            color: #fff;
+            font-family: 'urbanist', sans-serif;
+            font-size: 13px;
+            margin-top: -1px;
+            margin-bottom: 0px;
+            border-radius: 5px;
+            width: 92%
+        }
 
-/* HALAMAN TRANSAKSI */
-/* ==== FORMULIR INPUT TRANSAKSI =====*/
-.input-transaksi {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #1e73be;
-    color: #ffffff;
-}
+        /* ======== MENU =========== */
+        .daftar-menu {
+            margin-top: 15px;
+        }
 
-.konten {
-    width: 90%;
-    margin: 0 5%;
-}
-.input-transaksi p {
-    padding: 0;
-    margin-top: 20px;
-    margin-bottom: 2px;
-}
+        .daftar-menu .menu button {
+            width: 21%;
+            margin: 2%;
+            float: left;
+            border: none;
+            background-color: #fff;
+        }
 
-.btn-tengah {
-    margin: 0 3px;
-}
+        .daftar-menu .menu button img {
+            padding: 0 5px 5px 5px;
+            width: 100%;
+            border-radius: 15px;
+        }
 
-.tabs {
-    padding: 5px 10px;
-    margin: 7px 0 14px 0;
-    background-color: #fff;
-}
+        .daftar-menu .menu button h3 {
+            font-size: 11px;
+            font-weight: 600;
+        }
 
-.tabs button {
-    width: 100%;
-    padding: 3px;
-    font-size: small;
-    font-weight: 700;
-}
-
-select {
-    margin-bottom: 14px;
-}
-
-#operator-seluler {
-    display: block;
-    background-color: #eaeaea;
-    color: #000;
-    margin: 0 0 15px 0;
-    padding: 0 3px;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-/* ======= PRODUK ==============*/
-.daftar-produk {
-    margin-top: 180px;
-}
-
-.produk {
-    padding: 15px 10px;
-    margin: 7px 0;
-    border-top: 3px solid #1e73be;
-    background-color: #fff;
-}
-
-.produk:hover {
-    background-color: #ffc107;
-}
-
-.produk .gambar {
-    display: block;
-    width: 20%;
-    float: left;
-    padding-right: 5px;
-}
-.produk .gambar img {
-    width: 100%;
-}
-
-.produk .detail {
-    display: block;
-    width: 80%;
-    padding-left: 5px;
-}
-.produk .detail p {
-    margin: 0;
-}
-
-.nama-produk {
-    font-weight: 700;
-    font-size: medium;
-}
-
-.deskripsi-produk {
-    font-style: italic;
-    font-size: xx-small;
-}
+        .daftar-menu .menu a button:hover {
+            color: #1e73be;
+        }
