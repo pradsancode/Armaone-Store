@@ -11,105 +11,10 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="https://cdn.statically.io/gh/pradsancode/Armaone-Store/main/assets/css/style.min.css">
+
     <title>TopUp Pulsa</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #eaeaea;
-        }
-
-        .konten-produk {
-            width: 90%;
-            margin: 0 5%;
-        }
-
-        .kotak-input {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #00695c;
-            color: #ffffff;
-        }
-
-        .form-input {
-            width: 90%;
-            margin: 20px 5%;
-        }
-
-        .btn-tengah {
-            margin: 0 3px;
-        }
-
-        .kotak-menu {
-            width: 88%;
-            float: left;
-            margin-right: 2%;
-        }
-
-        .kotak-menu button {
-            width: 50%;
-        }
-
-        .kotak-bantuan {
-            width: 10%;
-        }
-
-        .kotak-bantuan button {
-            width: 100%;
-            font-weight: 700;
-        }
-
-        /*  == PRODUK == */
-        .daftar-produk {
-            margin-top: 165px;
-        }
-
-        .produk {
-            padding: 15px 10px;
-            margin: 7px 0;
-            border-top: 3px solid #00695c;
-            background-color: #fff;
-        }
-
-        .produk:hover {
-            background-color: #eaeaea;
-        }
-
-        .produk .gambar {
-            display: block;
-            width: 20%;
-            float: left;
-            padding-right: 5px;
-        }
-
-        .produk .gambar img {
-            width: 100%;
-        }
-
-        .produk .detail {
-            display: block;
-            width: 80%;
-            padding-left: 5px;
-        }
-
-        .produk .detail p {
-            margin: 0;
-        }
-
-        .nama-produk {
-            font-weight: 700;
-            font-size: medium;
-        }
-
-        .deskripsi-produk {
-            font-style: italic;
-            font-size: xx-small;
-        }
-    </style>
 </head>
 
 <body>
@@ -139,24 +44,27 @@
         </div>
     </div>
 
-<div class="pulsa-reguler" id="pulsa-reguler">
-    <div id="produk-telkomsel" class="daftar-produk">
-    </div><div id="produk-indosat" class="daftar-produk">
-    </div><div id="produk-xl" class="daftar-produk">
-    </div><div id="produk-axis" class="daftar-produk">
+    <div class="pulsa-reguler" id="pulsa-reguler">
+        <div id="produk-telkomsel" class="daftar-produk">
+        </div>
+        <div id="produk-indosat" class="daftar-produk">
+        </div>
+        <div id="produk-xl" class="daftar-produk">
+        </div>
+        <div id="produk-axis" class="daftar-produk">
+        </div>
     </div>
-</div>
 
-<div class="pulsa-tranfer d-none" id="pulsa-tranfer">
-    <div id="produk-telkomsel-tf" class="daftar-produk">
+    <div class="pulsa-tranfer d-none" id="pulsa-tranfer">
+        <div id="produk-telkomsel-tf" class="daftar-produk">
+        </div>
+        <div id="produk-indosat-tf" class="daftar-produk">
+        </div>
+        <div id="produk-xl-tf" class="daftar-produk">
+        </div>
+        <div id="produk-axis-tf" class="daftar-produk">
+        </div>
     </div>
-    <div id="produk-indosat-tf" class="daftar-produk">
-    </div>
-    <div id="produk-xl-tf" class="daftar-produk">
-    </div>
-    <div id="produk-axis-tf" class="daftar-produk">
-    </div>
-</div>
 
     <!-- Modal -->
     <div class="modal fade" id="petunjuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -169,11 +77,14 @@
                 <div class="modal-body">
                     <ol>
                         <li>Masukan <b>Nomor telepon seluler</b>. Anda bisa melakukannya dengan
-                            memasukan secara manual, pilih dari <b>kontak</b> atau <b>scan</b> jika memiliki QR code untuk nomor anda.
+                            memasukan secara manual, pilih dari <b>kontak</b> atau <b>scan</b> jika memiliki QR code
+                            untuk nomor anda.
                         </li>
-                        <li>Silahkan pilih <b>REGULER</b> (untuk membeli pulsa reguler) atau <b>TRANFER</b> (untuk membeli pulsa tranfer).</li>
+                        <li>Silahkan pilih <b>REGULER</b> (untuk membeli pulsa reguler) atau <b>TRANFER</b> (untuk
+                            membeli pulsa tranfer).</li>
                         <li>Kemudian pilih / tekan produk yang muncul di bawah.</li>
-                        <li>Akan muncul informasi harga dan detail produk. Jika dirasa sudah cocok silahkan tekan <b>Bayar</b>.
+                        <li>Akan muncul informasi harga dan detail produk. Jika dirasa sudah cocok silahkan tekan
+                            <b>Bayar</b>.
                         </li>
                         <li>Masukan <b>PIN</b> untuk mengkonfirmasi transaksi.</li>
                         <li>Transaksi Selesai. Silahkan lihat laporan transaksi anda.</li>
@@ -196,38 +107,38 @@
 
     <script>
         function TampilSeluler() {
-    var Nomor_HP = document.getElementById('nomor-tujuan').value;
-    var Prefix = Nomor_HP.slice(0, 4);
-    
-    if (Prefix == 0811 || Prefix == 0812 || Prefix == 0813 || Prefix == 0821 || Prefix == 0822 || Prefix == 0823 || Prefix == 0851 || Prefix == 0852 || Prefix == 0853) {
-        document.getElementById('produk-telkomsel').innerHTML = telkomsel;
-        document.getElementById('produk-telkomsel-tf').innerHTML = telkomsel_tf;
-    }
-    else if (Prefix == 0814 || Prefix == 0815 || Prefix == 0816 || Prefix == 0855 || Prefix == 0856 || Prefix == 0857 || Prefix == 0858) {
-        document.getElementById('produk-indosat').innerHTML = indosat;
-        document.getElementById('produk-indosat-tf').innerHTML = indosat_tf;
-    }
-    else if (Prefix == 0817 || Prefix == 0818 || Prefix == 0819 || Prefix == 0859 || Prefix == 0877 || Prefix == 0878) {
-        document.getElementById('produk-xl').innerHTML = xlaxis;
-        document.getElementById('produk-xl-tf').innerHTML = xlaxis_tf;
-    }
-    else if (Prefix == 0831 || Prefix == 0832 || Prefix == 0833 || Prefix == 0838) {
-        document.getElementById('produk-axis').innerHTML = xlaxis;
-        document.getElementById('produk-axis-tf').innerHTML = xlaxis_tf;
-    }
-    else {
-      document.getElementById("produk-telkomsel").innerHTML = "";
-      document.getElementById("produk-indosat").innerHTML = "";
-      document.getElementById("produk-xl").innerHTML = "";
-      document.getElementById("produk-axis").innerHTML = "";
-      document.getElementById("produk-telkomsel-tf").innerHTML = "";
-      document.getElementById("produk-indosat-tf").innerHTML = "";
-      document.getElementById("produk-xl-tf").innerHTML = "";
-      document.getElementById("produk-axis-tf").innerHTML = "";   
-    }
-  }
+            var Nomor_HP = document.getElementById('nomor-tujuan').value;
+            var Prefix = Nomor_HP.slice(0, 4);
 
-  function tampilReguler() {
+            if (Prefix == 0811 || Prefix == 0812 || Prefix == 0813 || Prefix == 0821 || Prefix == 0822 || Prefix == 0823 || Prefix == 0851 || Prefix == 0852 || Prefix == 0853) {
+                document.getElementById('produk-telkomsel').innerHTML = telkomsel;
+                document.getElementById('produk-telkomsel-tf').innerHTML = telkomsel_tf;
+            }
+            else if (Prefix == 0814 || Prefix == 0815 || Prefix == 0816 || Prefix == 0855 || Prefix == 0856 || Prefix == 0857 || Prefix == 0858) {
+                document.getElementById('produk-indosat').innerHTML = indosat;
+                document.getElementById('produk-indosat-tf').innerHTML = indosat_tf;
+            }
+            else if (Prefix == 0817 || Prefix == 0818 || Prefix == 0819 || Prefix == 0859 || Prefix == 0877 || Prefix == 0878) {
+                document.getElementById('produk-xl').innerHTML = xlaxis;
+                document.getElementById('produk-xl-tf').innerHTML = xlaxis_tf;
+            }
+            else if (Prefix == 0831 || Prefix == 0832 || Prefix == 0833 || Prefix == 0838) {
+                document.getElementById('produk-axis').innerHTML = xlaxis;
+                document.getElementById('produk-axis-tf').innerHTML = xlaxis_tf;
+            }
+            else {
+                document.getElementById("produk-telkomsel").innerHTML = "";
+                document.getElementById("produk-indosat").innerHTML = "";
+                document.getElementById("produk-xl").innerHTML = "";
+                document.getElementById("produk-axis").innerHTML = "";
+                document.getElementById("produk-telkomsel-tf").innerHTML = "";
+                document.getElementById("produk-indosat-tf").innerHTML = "";
+                document.getElementById("produk-xl-tf").innerHTML = "";
+                document.getElementById("produk-axis-tf").innerHTML = "";
+            }
+        }
+
+        function tampilReguler() {
             document.getElementById('btn-reguler').classList.add('btn-danger');
             document.getElementById('btn-reguler').classList.remove('btn-light');
             document.getElementById('btn-tranfer').classList.add('btn-light');
@@ -246,531 +157,531 @@
         }
     </script>
 
-<script>
-    // PULSA TELKOMSEL REGULER
-var db_telkomsel = [
-    [
-        "1",
-        "Telkomsel 1.000",
-        "Telkomsel Reguler",
-        "2000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 1.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-1-000-1605102'"
-    ],
-    [
-        "2",
-        "Telkomsel 2.000",
-        "Telkomsel Reguler",
-        "3000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 2.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-2-000-1605104'"
-    ],
-    [
-        "3",
-        "Telkomsel 3.000",
-        "Telkomsel Reguler",
-        "4000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 3.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-3-000-1605106'"
-    ],
-    [
-        "4",
-        "Telkomsel 4.000",
-        "Telkomsel Reguler",
-        "5000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 4.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-4-000-1605108'"
-    ],
-    [
-        "5",
-        "Telkomsel 5.000",
-        "Telkomsel Reguler",
-        "7000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 5.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-5-000-1605111'"
-    ],
-    [
-        "6",
-        "Telkomsel 6.000",
-        "Telkomsel Reguler",
-        "8000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 6.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-6-000-1605114'"
-    ],
-    [
-        "7",
-        "Telkomsel 7.000",
-        "Telkomsel Reguler",
-        "9000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 7.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-7-000-1605118'"
-    ],
-    [
-        "8",
-        "Telkomsel 8.000",
-        "Telkomsel Reguler",
-        "10000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 8.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-8-000-1605121'"
-    ],
-    [
-        "9",
-        "Telkomsel 9.000",
-        "Telkomsel Reguler",
-        "11000",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 9.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-9-000-1605124'"
-    ],
-    [
-        "10",
-        "Telkomsel 10.000",
-        "Telkomsel Reguler",
-        "11278",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 10.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-10-000-1605128'"
-    ],
-    [
-        "11",
-        "Telkomsel 15.000",
-        "Telkomsel Reguler",
-        "15985",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 15.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-15-000-1605131'"
-    ],
-    [
-        "12",
-        "Telkomsel 20.000",
-        "Telkomsel Reguler",
-        "20985",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 20.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-20-000-1605133'"
-    ],
-    [
-        "13",
-        "Telkomsel 25.000",
-        "Telkomsel Reguler",
-        "25900",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 25.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-25-000-1605135'"
-    ],
-    [
-        "14",
-        "Telkomsel 30.000",
-        "Telkomsel Reguler",
-        "30705",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 30.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-30-000-1605137'"
-    ],
-    [
-        "15",
-        "Telkomsel 35.000",
-        "Telkomsel Reguler",
-        "35845",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 35.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-35-000-1605138'"
-    ],
-    [
-        "16",
-        "Telkomsel 40.000",
-        "Telkomsel Reguler",
-        "40250",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 40.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-40-000-1605141'"
-    ],
-    [
-        "17",
-        "Telkomsel 45.000",
-        "Telkomsel Reguler",
-        "45745",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 45.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-45-000-1605158'"
-    ],
-    [
-        "18",
-        "Telkomsel 50.000",
-        "Telkomsel Reguler",
-        "50675",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 50.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-50-000-1605161'"
-    ],
-    [
-        "19",
-        "Telkomsel 55.000",
-        "Telkomsel Reguler",
-        "55645",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 55.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-55-000-1605163'"
-    ],
-    [
-        "20",
-        "Telkomsel 60.000",
-        "Telkomsel Reguler",
-        "60700",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 60.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-60-000-1605165'"
-    ],
-    [
-        "21",
-        "Telkomsel 65.000",
-        "Telkomsel Reguler",
-        "65520",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 65.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-65-000-1605836'"
-    ],
-    [
-        "22",
-        "Telkomsel 70.000",
-        "Telkomsel Reguler",
-        "70495",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 70.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-70-000-1605838'"
-    ],
-    [
-        "23",
-        "Telkomsel 75.000",
-        "Telkomsel Reguler",
-        "74355",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 75.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-75-000-1605840'"
-    ],
-    [
-        "24",
-        "Telkomsel 80.000",
-        "Telkomsel Reguler",
-        "80600",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 80.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-80-000-1605842'"
-    ],
-    [
-        "25",
-        "Telkomsel 85.000",
-        "Telkomsel Reguler",
-        "85345",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 85.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-85-000-1605847'"
-    ],
-    [
-        "26",
-        "Telkomsel 90.000",
-        "Telkomsel Reguler",
-        "90295",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 90.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-90-000-1605854'"
-    ],
-    [
-        "27",
-        "Telkomsel 95.000",
-        "Telkomsel Reguler",
-        "95245",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 95.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-95-000-1605858'"
-    ],
-    [
-        "28",
-        "Telkomsel 100.000",
-        "Telkomsel Reguler",
-        "99350",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 100.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-100-000-1605860'"
-    ],
-    [
-        "29",
-        "Telkomsel 150.000",
-        "Telkomsel Reguler",
-        "149900",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 150.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-150-000-1605863'"
-    ],
-    [
-        "30",
-        "Telkomsel 200.000",
-        "Telkomsel Reguler",
-        "199250",
-        "Isi Ulang (TopUp) Pulsa Telkomsel",
-        "- Menambah pulsa sejumlah 200.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/telkomsel-200-000-1605864'"
-    ]
-];
-    
-    let telkomsel = '<div class="konten-produk">';
-    for (let i = 0; i < db_telkomsel.length; i++) {
-      telkomsel += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_telkomsel[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/telkomsel-new.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_telkomsel[i][1] + '</p><p class="deskripsi-produk">' + db_telkomsel[i][4] + '</p></div></div>';
-    }
-    telkomsel += '</div>';
+    <script>
+        // PULSA TELKOMSEL REGULER
+        var db_telkomsel = [
+            [
+                "1",
+                "Telkomsel 1.000",
+                "Telkomsel Reguler",
+                "2000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 1.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-1-000-1605102'"
+            ],
+            [
+                "2",
+                "Telkomsel 2.000",
+                "Telkomsel Reguler",
+                "3000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 2.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-2-000-1605104'"
+            ],
+            [
+                "3",
+                "Telkomsel 3.000",
+                "Telkomsel Reguler",
+                "4000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 3.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-3-000-1605106'"
+            ],
+            [
+                "4",
+                "Telkomsel 4.000",
+                "Telkomsel Reguler",
+                "5000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 4.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-4-000-1605108'"
+            ],
+            [
+                "5",
+                "Telkomsel 5.000",
+                "Telkomsel Reguler",
+                "7000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 5.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-5-000-1605111'"
+            ],
+            [
+                "6",
+                "Telkomsel 6.000",
+                "Telkomsel Reguler",
+                "8000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 6.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-6-000-1605114'"
+            ],
+            [
+                "7",
+                "Telkomsel 7.000",
+                "Telkomsel Reguler",
+                "9000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 7.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-7-000-1605118'"
+            ],
+            [
+                "8",
+                "Telkomsel 8.000",
+                "Telkomsel Reguler",
+                "10000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 8.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-8-000-1605121'"
+            ],
+            [
+                "9",
+                "Telkomsel 9.000",
+                "Telkomsel Reguler",
+                "11000",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 9.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-9-000-1605124'"
+            ],
+            [
+                "10",
+                "Telkomsel 10.000",
+                "Telkomsel Reguler",
+                "11278",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 10.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-10-000-1605128'"
+            ],
+            [
+                "11",
+                "Telkomsel 15.000",
+                "Telkomsel Reguler",
+                "15985",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 15.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-15-000-1605131'"
+            ],
+            [
+                "12",
+                "Telkomsel 20.000",
+                "Telkomsel Reguler",
+                "20985",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 20.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-20-000-1605133'"
+            ],
+            [
+                "13",
+                "Telkomsel 25.000",
+                "Telkomsel Reguler",
+                "25900",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 25.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-25-000-1605135'"
+            ],
+            [
+                "14",
+                "Telkomsel 30.000",
+                "Telkomsel Reguler",
+                "30705",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 30.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-30-000-1605137'"
+            ],
+            [
+                "15",
+                "Telkomsel 35.000",
+                "Telkomsel Reguler",
+                "35845",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 35.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-35-000-1605138'"
+            ],
+            [
+                "16",
+                "Telkomsel 40.000",
+                "Telkomsel Reguler",
+                "40250",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 40.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-40-000-1605141'"
+            ],
+            [
+                "17",
+                "Telkomsel 45.000",
+                "Telkomsel Reguler",
+                "45745",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 45.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-45-000-1605158'"
+            ],
+            [
+                "18",
+                "Telkomsel 50.000",
+                "Telkomsel Reguler",
+                "50675",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 50.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-50-000-1605161'"
+            ],
+            [
+                "19",
+                "Telkomsel 55.000",
+                "Telkomsel Reguler",
+                "55645",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 55.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-55-000-1605163'"
+            ],
+            [
+                "20",
+                "Telkomsel 60.000",
+                "Telkomsel Reguler",
+                "60700",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 60.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-60-000-1605165'"
+            ],
+            [
+                "21",
+                "Telkomsel 65.000",
+                "Telkomsel Reguler",
+                "65520",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 65.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-65-000-1605836'"
+            ],
+            [
+                "22",
+                "Telkomsel 70.000",
+                "Telkomsel Reguler",
+                "70495",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 70.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-70-000-1605838'"
+            ],
+            [
+                "23",
+                "Telkomsel 75.000",
+                "Telkomsel Reguler",
+                "74355",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 75.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-75-000-1605840'"
+            ],
+            [
+                "24",
+                "Telkomsel 80.000",
+                "Telkomsel Reguler",
+                "80600",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 80.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-80-000-1605842'"
+            ],
+            [
+                "25",
+                "Telkomsel 85.000",
+                "Telkomsel Reguler",
+                "85345",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 85.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-85-000-1605847'"
+            ],
+            [
+                "26",
+                "Telkomsel 90.000",
+                "Telkomsel Reguler",
+                "90295",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 90.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-90-000-1605854'"
+            ],
+            [
+                "27",
+                "Telkomsel 95.000",
+                "Telkomsel Reguler",
+                "95245",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 95.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-95-000-1605858'"
+            ],
+            [
+                "28",
+                "Telkomsel 100.000",
+                "Telkomsel Reguler",
+                "99350",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 100.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-100-000-1605860'"
+            ],
+            [
+                "29",
+                "Telkomsel 150.000",
+                "Telkomsel Reguler",
+                "149900",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 150.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-150-000-1605863'"
+            ],
+            [
+                "30",
+                "Telkomsel 200.000",
+                "Telkomsel Reguler",
+                "199250",
+                "Isi Ulang (TopUp) Pulsa Telkomsel",
+                "- Menambah pulsa sejumlah 200.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/telkomsel-200-000-1605864'"
+            ]
+        ];
 
-// PULSA INDOSAT REGULER
-var db_indosat = [
-    [
-        "1",
-        "Indosat 5.000",
-        "Indosat Reguler",
-        "6855",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 5.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-5-000-1604376'"
-    ],
-    [
-        "2",
-        "Indosat 10.000",
-        "Indosat Reguler",
-        "11855",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 10.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-10-000-1604377'"
-    ],
-    [
-        "3",
-        "Indosat 15.000",
-        "Indosat Reguler",
-        "15935",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 15.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-15-000-1604380'"
-    ],
-    [
-        "4",
-        "indosat 20.000",
-        "Indosat Reguler",
-        "20865",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 20.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-20-000-1604381'"
-    ],
-    [
-        "5",
-        "Indosat 25.000",
-        "Indosat Reguler",
-        "25790",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 25.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-25-000-1604382'"
-    ],
-    [
-        "6",
-        "Indosat 30.000",
-        "Indosat Reguler",
-        "30585",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 30.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-30-000-1604384'"
-    ],
-    [
-        "7",
-        "Indosat 50.000",
-        "Indosat Reguler",
-        "49940",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 50.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-50-000-1604385'"
-    ],
-    [
-        "8",
-        "Indosat 100.000",
-        "Indosat Reguler",
-        "97720",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 100.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-100-000-1604386'"
-    ],
-    [
-        "9",
-        "Indosat 150.000",
-        "Indosat Reguler",
-        "143725",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 150.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-150-000-1604388'"
-    ],
-    [
-        "10",
-        "Indosat 200.000",
-        "Indosat Reguler",
-        "186225",
-        "Isi Ulang (TopUp) Pulsa Indosat",
-        "- Menambah pulsa sejumlah 200.000<br>- Menambah masa aktif kartu<br>",
-        "'https://armaonestore.com/produk/indosat-200-000-1604390'"
-    ]
-];
-    
-    let indosat = '<div class="konten-produk">';
-    for (let i = 0; i < db_indosat.length; i++) {
-      indosat += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_indosat[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-indosat.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_indosat[i][1] + '</p><p class="deskripsi-produk">' + db_indosat[i][4] + '</p></div></div>';
-    }
-    indosat += '</div>';
-
-
-// PULSA XL & AXIS REGULER
-var db_xlaxis = [
-    [
-        "1",
-        "XL / Axis 5.000",
-        "XL/Axis Reguler",
-        "6927",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 5.000<br>- Menambah masa aktif kartu selama 7 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-5-000-1603775'"
-    ],
-    [
-        "2",
-        "XL / Axis 10.000",
-        "XL/Axis Reguler",
-        "11902",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 10.000<br>- Menambah masa aktif kartu selama 15 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-10-000-1603792'"
-    ],
-    [
-        "3",
-        "XL / Axis 15.000",
-        "XL/Axis Reguler",
-        "16040",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 15.000<br>- Menambah masa aktif kartu selama 20 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-15-000-1603795'"
-    ],
-    [
-        "4",
-        "XL / Axis 25.000",
-        "XL/Axis Reguler",
-        "25970",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 25.000<br>- Menambah masa aktif kartu selama 30 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-25-000-1603800'"
-    ],
-    [
-        "5",
-        "XL / Axis 30.000",
-        "XL/Axis Reguler",
-        "30955",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 30.000<br>- Menambah masa aktif kartu selama 35 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-30-000-1603804'"
-    ],
-    [
-        "6",
-        "XL / Axis 50.000",
-        "XL/Axis Reguler",
-        "50820",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 50.000<br>- Menambah masa aktif kartu selama 45 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-50-000-1603811'"
-    ],
-    [
-        "7",
-        "XL / Axis 100.000",
-        "XL/Axis Reguler",
-        "99500",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 100.000<br>- Menambah masa aktif kartu selama 60 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-100-000-1603816'"
-    ],
-    [
-        "8",
-        "XL / Axis 150.000",
-        "XL/Axis Reguler",
-        "150875",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 150.000<br>- Menambah masa aktif kartu selama 90 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-150-000-1603818'"
-    ],
-    [
-        "9",
-        "XL / Axis 200.000",
-        "XL/Axis Reguler",
-        "200875",
-        "Isi Ulang (TopUp) Pulsa XL /Axis",
-        "- Menambah pulsa sejumlah 200.000<br>- Menambah masa aktif kartu selama 120 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
-        "'https://armaonestore.com/produk/xl-axis-200-000-1603820'"
-    ]
-];
-    
-    let xlaxis = '<div class="konten-produk">';
-    for (let i = 0; i < db_xlaxis.length; i++) {
-      xlaxis += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_xlaxis[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-xlaxis.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_xlaxis[i][1] + '</p><p class="deskripsi-produk">' + db_xlaxis[i][4] + '</p></div></div>';
-      
-    }
-    xlaxis += '</div>';
-</script>
-
-<script>
-    // PULSA TELKOMSEL TRANFER
-var db_telkomsel_tf = [
-    [1,"Produk tidak tersedia","1.000","2.000","Mohon maaf. Kami akan menambahkan produk segera.","Menambah Masa Aktif Kartu","0 hr"]
-    ];
-    
-    let telkomsel_tf = '<div class="konten-produk">';
-    for (let i = 0; i < db_telkomsel_tf.length; i++) {
-      telkomsel_tf += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_telkomsel_tf[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/stop.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_telkomsel_tf[i][1] + '</p><p class="deskripsi-produk">' + db_telkomsel_tf[i][4] + '</p></div></div>';
-    }
-    telkomsel_tf += '</div>';
-
-// PULSA INDOSAT REGULER
-var db_indosat_tf = [
-[1,"Produk tidak tersedia","1.000","2.000","Mohon maaf. Kami akan menambahkan produk segera.","Menambah Masa Aktif Kartu","0 hr"]
-    ];
-    
-    let indosat_tf = '<div class="konten-produk">';
-    for (let i = 0; i < db_indosat_tf.length; i++) {
-      indosat_tf += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_indosat_tf[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/stop.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_indosat_tf[i][1] + '</p><p class="deskripsi-produk">' + db_indosat_tf[i][4] + '</p></div></div>';
-    }
-    indosat_tf += '</div>';
-
-
-// PULSA XL & AXIS REGULER
-var db_xlaxis_tf = [
-[1,"Produk tidak tersedia","1.000","2.000","Mohon maaf. Kami akan menambahkan produk segera.","Menambah Masa Aktif Kartu","0 hr"]
-    ];
-    
-    let xlaxis_tf = '<div class="konten-produk">';
-    for (let i = 0; i < db_xlaxis_tf.length; i++) {
-      xlaxis_tf += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_xlaxis_tf[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/stop.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_xlaxis_tf[i][1] + '</p><p class="deskripsi-produk">' + db_xlaxis_tf[i][4] + '</p></div></div>';
-      
-    }
-    xlaxis_tf += '</div>';
-</script>
-
-<script>
-    function klik(link) {
-        var NomorTujuan = document.getElementById('nomor-tujuan').value;
-
-        if (NomorTujuan == "") {
-            alert("Masukan Nomor Tujuan terlebih dahulu")
+        let telkomsel = '<div class="konten-produk">';
+        for (let i = 0; i < db_telkomsel.length; i++) {
+            telkomsel += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_telkomsel[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/telkomsel-new.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_telkomsel[i][1] + '</p><p class="deskripsi-produk">' + db_telkomsel[i][4] + '</p></div></div>';
         }
-        else {
-            window.location = link + '?catatan=' + NomorTujuan;
+        telkomsel += '</div>';
+
+        // PULSA INDOSAT REGULER
+        var db_indosat = [
+            [
+                "1",
+                "Indosat 5.000",
+                "Indosat Reguler",
+                "6855",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 5.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-5-000-1604376'"
+            ],
+            [
+                "2",
+                "Indosat 10.000",
+                "Indosat Reguler",
+                "11855",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 10.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-10-000-1604377'"
+            ],
+            [
+                "3",
+                "Indosat 15.000",
+                "Indosat Reguler",
+                "15935",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 15.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-15-000-1604380'"
+            ],
+            [
+                "4",
+                "indosat 20.000",
+                "Indosat Reguler",
+                "20865",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 20.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-20-000-1604381'"
+            ],
+            [
+                "5",
+                "Indosat 25.000",
+                "Indosat Reguler",
+                "25790",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 25.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-25-000-1604382'"
+            ],
+            [
+                "6",
+                "Indosat 30.000",
+                "Indosat Reguler",
+                "30585",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 30.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-30-000-1604384'"
+            ],
+            [
+                "7",
+                "Indosat 50.000",
+                "Indosat Reguler",
+                "49940",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 50.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-50-000-1604385'"
+            ],
+            [
+                "8",
+                "Indosat 100.000",
+                "Indosat Reguler",
+                "97720",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 100.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-100-000-1604386'"
+            ],
+            [
+                "9",
+                "Indosat 150.000",
+                "Indosat Reguler",
+                "143725",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 150.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-150-000-1604388'"
+            ],
+            [
+                "10",
+                "Indosat 200.000",
+                "Indosat Reguler",
+                "186225",
+                "Isi Ulang (TopUp) Pulsa Indosat",
+                "- Menambah pulsa sejumlah 200.000<br>- Menambah masa aktif kartu<br>",
+                "'https://armaonestore.com/produk/indosat-200-000-1604390'"
+            ]
+        ];
+
+        let indosat = '<div class="konten-produk">';
+        for (let i = 0; i < db_indosat.length; i++) {
+            indosat += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_indosat[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-indosat.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_indosat[i][1] + '</p><p class="deskripsi-produk">' + db_indosat[i][4] + '</p></div></div>';
         }
-    }
-</script>
-    
+        indosat += '</div>';
+
+
+        // PULSA XL & AXIS REGULER
+        var db_xlaxis = [
+            [
+                "1",
+                "XL / Axis 5.000",
+                "XL/Axis Reguler",
+                "6927",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 5.000<br>- Menambah masa aktif kartu selama 7 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-5-000-1603775'"
+            ],
+            [
+                "2",
+                "XL / Axis 10.000",
+                "XL/Axis Reguler",
+                "11902",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 10.000<br>- Menambah masa aktif kartu selama 15 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-10-000-1603792'"
+            ],
+            [
+                "3",
+                "XL / Axis 15.000",
+                "XL/Axis Reguler",
+                "16040",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 15.000<br>- Menambah masa aktif kartu selama 20 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-15-000-1603795'"
+            ],
+            [
+                "4",
+                "XL / Axis 25.000",
+                "XL/Axis Reguler",
+                "25970",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 25.000<br>- Menambah masa aktif kartu selama 30 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-25-000-1603800'"
+            ],
+            [
+                "5",
+                "XL / Axis 30.000",
+                "XL/Axis Reguler",
+                "30955",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 30.000<br>- Menambah masa aktif kartu selama 35 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-30-000-1603804'"
+            ],
+            [
+                "6",
+                "XL / Axis 50.000",
+                "XL/Axis Reguler",
+                "50820",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 50.000<br>- Menambah masa aktif kartu selama 45 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-50-000-1603811'"
+            ],
+            [
+                "7",
+                "XL / Axis 100.000",
+                "XL/Axis Reguler",
+                "99500",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 100.000<br>- Menambah masa aktif kartu selama 60 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-100-000-1603816'"
+            ],
+            [
+                "8",
+                "XL / Axis 150.000",
+                "XL/Axis Reguler",
+                "150875",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 150.000<br>- Menambah masa aktif kartu selama 90 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-150-000-1603818'"
+            ],
+            [
+                "9",
+                "XL / Axis 200.000",
+                "XL/Axis Reguler",
+                "200875",
+                "Isi Ulang (TopUp) Pulsa XL /Axis",
+                "- Menambah pulsa sejumlah 200.000<br>- Menambah masa aktif kartu selama 120 hari<br><br><i><b>Catatan dikutip dari halaman XL.co.id</b></i><br><div><i>*Masa aktif per-nominal dapat berubah sewaktu-waktu</i></div><div><i>**Jika pelanggan memiliki Masa Aktif yang lebih lama/panjang dari Masa Aktif yang didapat pada saat pembelian pulsa yang terakhir, maka Masa Aktif pelanggan tidak bertambah.</i></div>",
+                "'https://armaonestore.com/produk/xl-axis-200-000-1603820'"
+            ]
+        ];
+
+        let xlaxis = '<div class="konten-produk">';
+        for (let i = 0; i < db_xlaxis.length; i++) {
+            xlaxis += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_xlaxis[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-xlaxis.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_xlaxis[i][1] + '</p><p class="deskripsi-produk">' + db_xlaxis[i][4] + '</p></div></div>';
+
+        }
+        xlaxis += '</div>';
+    </script>
+
+    <script>
+        // PULSA TELKOMSEL TRANFER
+        var db_telkomsel_tf = [
+            [1, "Produk tidak tersedia", "1.000", "2.000", "Mohon maaf. Kami akan menambahkan produk segera.", "Menambah Masa Aktif Kartu", "0 hr"]
+        ];
+
+        let telkomsel_tf = '<div class="konten-produk">';
+        for (let i = 0; i < db_telkomsel_tf.length; i++) {
+            telkomsel_tf += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_telkomsel_tf[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/stop.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_telkomsel_tf[i][1] + '</p><p class="deskripsi-produk">' + db_telkomsel_tf[i][4] + '</p></div></div>';
+        }
+        telkomsel_tf += '</div>';
+
+        // PULSA INDOSAT REGULER
+        var db_indosat_tf = [
+            [1, "Produk tidak tersedia", "1.000", "2.000", "Mohon maaf. Kami akan menambahkan produk segera.", "Menambah Masa Aktif Kartu", "0 hr"]
+        ];
+
+        let indosat_tf = '<div class="konten-produk">';
+        for (let i = 0; i < db_indosat_tf.length; i++) {
+            indosat_tf += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_indosat_tf[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/stop.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_indosat_tf[i][1] + '</p><p class="deskripsi-produk">' + db_indosat_tf[i][4] + '</p></div></div>';
+        }
+        indosat_tf += '</div>';
+
+
+        // PULSA XL & AXIS REGULER
+        var db_xlaxis_tf = [
+            [1, "Produk tidak tersedia", "1.000", "2.000", "Mohon maaf. Kami akan menambahkan produk segera.", "Menambah Masa Aktif Kartu", "0 hr"]
+        ];
+
+        let xlaxis_tf = '<div class="konten-produk">';
+        for (let i = 0; i < db_xlaxis_tf.length; i++) {
+            xlaxis_tf += '<div class="produk rounded shadow-sm row" onclick="klik(' + db_xlaxis_tf[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/stop.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_xlaxis_tf[i][1] + '</p><p class="deskripsi-produk">' + db_xlaxis_tf[i][4] + '</p></div></div>';
+
+        }
+        xlaxis_tf += '</div>';
+    </script>
+
+    <script>
+        function klik(link) {
+            var NomorTujuan = document.getElementById('nomor-tujuan').value;
+
+            if (NomorTujuan == "") {
+                alert("Masukan Nomor Tujuan terlebih dahulu")
+            }
+            else {
+                window.location = link + '?catatan=' + NomorTujuan;
+            }
+        }
+    </script>
+
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
