@@ -273,6 +273,6 @@ var db_telkomsel = [
 
 let telkomsel = '<div class="konten-produk">';
 for (let i = 0; i < db_telkomsel.length; i++) {
-    telkomsel += '<div class="produk rounded shadow-sm row" onclick="beli(' + db_telkomsel[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/telkomsel-new.jpg" alt=""></div><div class="detail"><p class="nama-produk">' + db_telkomsel[i][1] + '</p><p class="deskripsi-produk">' + db_telkomsel[i][4] + '</p></div></div>';
+    telkomsel += '<div class="produk rounded shadow-sm row" onclick="beli(' + db_telkomsel[i][6] + ')"><div class="gambar"><img src="https://pradstorage.files.wordpress.com/2023/02/produk-telkomsel.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_telkomsel[i][1] + '</p><p class="deskripsi-produk">' + db_telkomsel[i][4] + '</p></div></div>';
 }
 telkomsel += '</div>';

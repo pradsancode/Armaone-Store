@@ -84,7 +84,7 @@ var db_xlaxis = [
 
 let xlaxis = '<div class="konten-produk">';
 for (let i = 0; i < db_xlaxis.length; i++) {
-    xlaxis += '<div class="produk rounded shadow-sm row" onclick="beli(' + db_xlaxis[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-xlaxis.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_xlaxis[i][1] + '</p><p class="deskripsi-produk">' + db_xlaxis[i][4] + '</p></div></div>';
+    xlaxis += '<div class="produk rounded shadow-sm row" onclick="beli(' + db_xlaxis[i][6] + ')"><div class="gambar"><img src="https://pradstorage.files.wordpress.com/2023/02/produk-xl-axis.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_xlaxis[i][1] + '</p><p class="deskripsi-produk">' + db_xlaxis[i][4] + '</p></div></div>';
 
 }
 xlaxis += '</div>';

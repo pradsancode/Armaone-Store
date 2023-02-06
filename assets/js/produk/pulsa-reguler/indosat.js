@@ -93,6 +93,6 @@ var db_indosat = [
 
 let indosat = '<div class="konten-produk">';
 for (let i = 0; i < db_indosat.length; i++) {
-    indosat += '<div class="produk rounded shadow-sm row" onclick="beli(' + db_indosat[i][6] + ')"><div class="gambar"><img src="https://galeriimgqyu.files.wordpress.com/2023/01/pajang-indosat.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_indosat[i][1] + '</p><p class="deskripsi-produk">' + db_indosat[i][4] + '</p></div></div>';
+    indosat += '<div class="produk rounded shadow-sm row" onclick="beli(' + db_indosat[i][6] + ')"><div class="gambar"><img src="https://pradstorage.files.wordpress.com/2023/02/produk-indosat.png" alt=""></div><div class="detail"><p class="nama-produk">' + db_indosat[i][1] + '</p><p class="deskripsi-produk">' + db_indosat[i][4] + '</p></div></div>';
 }
 indosat += '</div>';
